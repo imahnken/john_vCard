@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Strokes - Personal site template</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="ie7.css" media=screen>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="lightbox.css" media="screen">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lightbox-0.5.pack.js"></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/Harabara_700.font.js"></script>
+		
+		<!-- Cufon font replacement -->
+		<script type="text/javascript">
+			Cufon.replace('ul#navigation li a', { textShadow: '0 2px rgba(0, 0, 0, 0.2)' });
+		</script>
+		<script type="text/javascript">
+			Cufon.replace('#social ul li a', {hover:true});
+		</script>
+		
+		<!-- Lightbox implementation -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#work ul li a').lightBox();
+			});
+		</script>
+		
+		<!-- Navigation and Content sliding effects -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#navigation a.about').css('opacity','0.6');
+				$('ul#navigation li').hover(function(){
+					$(this).stop().animate({marginRight:6}, 250);
+					}, function(){
+						$(this).stop().animate({marginRight:0}, 250)
+				});
+				$('#navigation a.about').click(function(){
+					$('#content').animate({'top':'0'},700);
+					$('#navigation a').css('opacity','1');
+					$(this).css('opacity','0.6');
+				});
+				$('#navigation a.work').click(function(){
+					$('#content').animate({'top':'-560'},700);
+					$('#navigation a').css('opacity','1');
+					$(this).css('opacity','0.6');
+				});
+				$('#navigation a.social').click(function(){
+					$('#content').animate({'top':'-1120'},700);
+					$('#navigation a').css('opacity','1');
+					$(this).css('opacity','0.6');
+				});
+				$('#navigation a.contact').click(function(){
+					$('#content').animate({'top':'-1680'},700);
+					$('#navigation a').css('opacity','1');
+					$(this).css('opacity','0.6');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="pagewrap">
+			
+			<!-- Site navigation -->
+			<div id="left">
+				<ul id="navigation">
+					<li><a class="about" href="#1">about me</a></li>
+					<li><a class="work" href="#1">my work</a></li>
+					<li><a class="social" href="#1">social updates</a></li>
+					<li><a class="contact" href="#1">contact me</a></li>
+				</ul>
+			</div>
+			
+			<!-- Site content -->
+			<div id="right">
+				<div id="container">
+					<ul id="content">
+						<li id="about" class="content-block">
+							<img src="images/photo.jpg" alt="photo">
+							<h2 class="name"><small>Hi! I'm</small>John Doe</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>At vero eos et accusamus et iusto odio <a href="#">dignissimos</a>, <a href="#">ducimus qui</a> blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et.</p>
+							<h3>Services I provide:</h3>
+							<ul>
+								<li>Branding</li>
+								<li>Web design &nbsp; development</li>
+								<li>UX Design</li>
+							</ul>
+						</li>
+						<li id="work">
+							<p>Labore et dolore magna aliqua. <a href="#">Ut enim ad minim veniam</a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<h3>Logo Design:</h3>
+							<ul>
+								<li><a href="images/image01.jpg"><img src="images/logo01.jpg" alt="logo01"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/logo02.jpg" alt="logo02"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/logo03.jpg" alt="logo03"></a></li>
+							</ul>
+							<h3>Web Design:</h3>
+							<ul>
+								<li><a href="images/image01.jpg"><img src="images/web01.jpg" alt="web01"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/web02.jpg" alt="web02"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/web03.jpg" alt="web03"></a></li>
+							</ul>
+							<h3>Interface Design:</h3>
+							<ul>
+								<li><a href="images/image01.jpg"><img src="images/ui01.jpg" alt="ui01"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/ui02.jpg" alt="ui02"></a></li>
+								<li><a href="images/image01.jpg"><img src="images/ui03.jpg" alt="ui03"></a></li>
+							</ul>
+						</li>
+						<li id="social">
+							<div id="tweet">
+								<p class="tweet-text">Blanditiis praesentium deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate provident.</p>
+								<p class="tweet-meta">- 12 hours ago on <a href="#">Twitter</a></p>
+							</div>
+							<ul>
+								<li class="facebook"><a href="#">facebook</a></li>
+								<li class="linkedin"><a href="#">linked-in</a></li>
+								<li class="flickr"><a href="#">flickr</a></li>
+								<li class="lastfm"><a href="#">last.fm</a></li>
+								<li class="delicious"><a href="#">delicious</a></li>
+							</ul>
+						</li>
+						<li id="contact">
+							<p>Eeaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+							<h3>Drop me a note</h3>
+							<ul>
+								<li class="msgname"><label>Name: </label><input type="text" name="name"></li>
+								<li><label>E-mail: </label><input type="text" name="email"></li>
+								<li><label>Message: </label><textarea name="message" rows=4 cols=35></textarea></li>
+								<li><input class="send" type="submit" value="Send"></li>
+							</ul>
+							<div id="contactinfo">
+								<h3>Contact Information</h3>
+								<p>Address line 1, line 2, City, XY, 12345</p>
+								<p class="phone">123-456-7890</p>
+								<p class="email"><a href="#">info@company.com</a></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

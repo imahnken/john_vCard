@@ -1,0 +1,12 @@
+#right, #right #container {
+	position: relative;
+}
+
+li#work ul li {
+	float: left;
+}
+
+#contactinfo {
+	padding-left: 48px;
+	background: url("images/icon-contactinfo.png") no-repeat 10px 0;
+}
